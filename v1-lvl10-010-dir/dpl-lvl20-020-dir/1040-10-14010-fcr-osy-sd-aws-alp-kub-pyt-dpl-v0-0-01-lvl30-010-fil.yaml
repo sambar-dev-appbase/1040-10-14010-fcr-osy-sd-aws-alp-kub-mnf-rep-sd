@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alp-kub-1040-10-osy-sd-aws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alp-kub-1040-10-osy-sd-aws
+  template:
+    metadata:
+      labels:
+        app: alp-kub-1040-10-osy-sd-aws
+    spec:
+      containers:
+      - name: alp-kub-1040-10-osy-sd-aws
+        image: 635602896676.dkr.ecr.eu-west-2.amazonaws.com/1040-10-14010-fcr-osy-sd-aws-alp-kub-bas-img-rep-sd:2023.07.13-1
+        command: ["sleep", "infinity"]
